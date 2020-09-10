@@ -4,6 +4,7 @@ import com.guli.edu.entity.Course;
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.guli.edu.form.CourseInfoForm;
 import com.guli.edu.vo.CoursePublishVo;
+import com.guli.edu.vo.CourseWebVo;
 import org.springframework.stereotype.Repository;
 
 /**
@@ -28,4 +29,6 @@ public interface CourseService extends IService<Course> {
     CoursePublishVo getCoursePublishVoById(String id);
 
     void publishCourseById(String id);
+
+    CourseWebVo selectCourseWebVoById(String id);
 }

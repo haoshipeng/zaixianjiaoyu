@@ -13,4 +13,5 @@ import com.baomidou.mybatisplus.extension.service.IService;
  */
 public interface MemberService extends IService<Member> {
 
+    Integer selectRegisterByDay(String day);
 }

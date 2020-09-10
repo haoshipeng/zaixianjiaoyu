@@ -10,10 +10,9 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>guli-microservice-edu</artifactId>
+    <artifactId>guli-microservice-statistics</artifactId>
 
     <dependencies>
-
         <dependency>
             <groupId>com.guli</groupId>
             <artifactId>guli-framework-common</artifactId>
@@ -58,17 +57,6 @@
             <artifactId>lombok</artifactId>
         </dependency>
 
-        <!--xls-->
-        <dependency>
-            <groupId>org.apache.poi</groupId>
-            <artifactId>poi</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>commons-fileupload</groupId>
-            <artifactId>commons-fileupload</artifactId>
-        </dependency>
-
         <!--服务注册-->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
@@ -101,4 +89,5 @@
             </resource>
         </resources>
     </build>
+
 </project>

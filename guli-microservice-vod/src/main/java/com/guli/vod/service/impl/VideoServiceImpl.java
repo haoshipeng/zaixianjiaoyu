@@ -7,11 +7,12 @@ import com.aliyuncs.utils.StringUtils;
 import com.guli.common.constants.ResultCodeEnum;
 import com.guli.vod.service.VideoService;
 import com.guli.vod.util.ConstantPropertiesUtils;
+import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.IOException;
 import java.io.InputStream;
-
+@Service
 public class VideoServiceImpl implements VideoService {
     @Override
     public String uploadVideo(MultipartFile file) {

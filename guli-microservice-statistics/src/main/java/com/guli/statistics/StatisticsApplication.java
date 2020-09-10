@@ -1,17 +1,15 @@
-package com.guli.edu;
+package com.guli.statistics;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.context.annotation.ComponentScan;
-import sun.applet.Main;
 
 @SpringBootApplication
-@ComponentScan(basePackages ={"com.guli.edu","com.guli.common"} )
-@EnableEurekaClient //可选
-public class EduApplication {
-
+@ComponentScan(basePackages={"com.guli.statistics","com.guli.common"})
+@EnableEurekaClient
+public class StatisticsApplication {
     public static void main(String[] args) {
-        SpringApplication.run(EduApplication.class);
+        SpringApplication.run(StatisticsApplication.class, args);
     }
 }
