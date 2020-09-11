@@ -1,5 +1,6 @@
 package com.guli.oss.controller;
 
+import com.guli.common.constants.ResultCodeEnum;
 import com.guli.common.vo.R;
 import com.guli.oss.service.FileService;
 import io.swagger.annotations.Api;
@@ -35,5 +36,20 @@ public class FileUploadController {
         uploadUrl = fileService.upload(file, fileHost);
         //返回r对象
         return R.ok().message("文件上传成功").data("url", uploadUrl);
+    }
+
+    @ApiOperation(value = "文件删除")
+    @DeleteMapping("remove")
+    public R removeFile(
+            @ApiParam(name = "url", value = "要删除的文件路径", required = true)
+            @RequestBody String url) {
+
+//        try {
+            fileService.removeFile(url);
+            return R.ok().message("文件刪除成功");
+//        } catch (Exception e) {
+//            log.error(ExceptionUtils.getMessage(e));
+//            throw new GuliException(ResultCodeEnum.FILE_DELETE_ERROR);
+//        }
     }
 }

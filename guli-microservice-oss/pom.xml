@@ -45,6 +45,12 @@
             <artifactId>joda-time</artifactId>
         </dependency>
 
+        <!--服务注册-->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+        </dependency>
+
         <!--开发者工具-->
         <dependency>
             <groupId>org.springframework.boot</groupId>

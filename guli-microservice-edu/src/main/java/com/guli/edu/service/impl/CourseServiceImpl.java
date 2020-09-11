@@ -1,6 +1,7 @@
 package com.guli.edu.service.impl;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.guli.edu.client.OssClient;
 import com.guli.edu.entity.Chapter;
 import com.guli.edu.entity.Course;
 import com.guli.edu.entity.CourseDescription;
@@ -36,6 +37,8 @@ public class CourseServiceImpl extends ServiceImpl<CourseMapper, Course> impleme
     private VideoMapper videoMapper;
     @Autowired
     private ChapterMapper chapterMapper;
+    @Autowired
+    private OssClient ossClient;
 
     @Transactional(rollbackFor = Exception.class)
     @Override
@@ -92,6 +95,13 @@ public class CourseServiceImpl extends ServiceImpl<CourseMapper, Course> impleme
     @Transactional(rollbackFor = Exception.class)
     @Override
     public void removeCourseById(String id) {
+
+        //删除阿里云视频文件 TODO
+
+        //删除阿里云中oss课程封面 TODO
+        Course course = baseMapper.selectById(id);
+        String cover = course.getCover();
+        ossClient.removeFile(cover);
 
         //根据id删除所有视频
         QueryWrapper<Video> queryWrapperVideo = new QueryWrapper<>();
