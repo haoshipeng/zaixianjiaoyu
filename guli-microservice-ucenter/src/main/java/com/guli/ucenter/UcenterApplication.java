@@ -8,6 +8,7 @@ import org.springframework.context.annotation.ComponentScan;
 @SpringBootApplication
 @ComponentScan(basePackages={"com.guli.ucenter","com.guli.common"})
 @EnableEurekaClient
+
 public class UcenterApplication {
     public static void main(String[] args) {
         SpringApplication.run(UcenterApplication.class, args);

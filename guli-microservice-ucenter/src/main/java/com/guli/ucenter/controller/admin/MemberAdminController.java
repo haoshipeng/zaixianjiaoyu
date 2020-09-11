@@ -18,7 +18,7 @@ import org.springframework.web.bind.annotation.*;
  * @since 2020-09-09
  */
 @RestController
-@RequestMapping("admin/ucenter/member")
+@RequestMapping("/admin/ucenter/member")
 @CrossOrigin
 @Api(description = "会员中心")
 public class MemberAdminController {
